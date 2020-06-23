@@ -1,0 +1,7 @@
+[
+  {
+    "name": "Weight tracker",
+    "description": "It accepts a set of manual entries of weight measurements taken at different dates, can plot a graph, and can allow to track multiple entities, for example more than one person weight.",
+    "author": "Momchil Georgiev"
+  }
+]
