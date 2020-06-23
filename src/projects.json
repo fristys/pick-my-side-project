@@ -1,7 +1,87 @@
 [
   {
     "name": "Weight tracker",
-    "description": "It accepts a set of manual entries of weight measurements taken at different dates, can plot a graph, and can allow to track multiple entities, for example more than one person weight.",
+    "description": "Accept a set of manual entries of weight measurements taken at different dates, can plot a graph, and can allow to track multiple entities, for example more than one person weight.",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Calculator",
+    "description": "A standard calculator: numbers, +, -, *, /, and the result. Try to speed run it, or, hell, learn a new language or framework with it.",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Book database",
+    "description": "Enter the books you own, the books you’d like to buy, store the book info, images. Add extra metadata from Goodreads",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Recipes",
+    "description": "Enter a name, a description with the steps. Have pictures and some ranking for difficulty and quality. Add the time needed. Have different steps with a picture for each. Store them somewhere",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Bill tracker",
+    "description": "Log bills, amounts and date. List bills. Have a few graphs (this year / last year)",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Expenses tracker",
+    "description": "Log expenses, tag them (or have categories). List expenses. Have a few graphs (last month / last year)",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Chat",
+    "description": "Some sort of stripped-down Slack. People enter without authentication and are assigned a name, stored for when they come back. Store the history. Add notifications",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Notes",
+    "description": "Add a new note. List all your notes in the sidebar",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Personal diary",
+    "description": "Add entries with a date and text. Entries have a date. Show more recent entries first. Attach pictures",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Pomodoro/Timer",
+    "description": "Enter a time. Start timer. Alert when the time is over",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Meme generator",
+    "description": "Have 10 popular meme images. Let the user add text to them and output an image + text. Store the meme history",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Tic-tac-toe",
+    "description": "X marks the spot",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Blog engine",
+    "description": "Allow admin to login and add posts. Visitors can add comments",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "QA engine",
+    "description": "Allow users to login. Allow adding questions. Allow answering questions. Allow original user choosing the best question",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Forum engine",
+    "description": "Allow users to login. Allow users to add posts. Allow users to comment on posts",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Hacker News client",
+    "description": "List the popular posts. Show a post + comments. Show user profiles. Search HN",
+    "author": "Momchil Georgiev"
+  },
+  {
+    "name": "Reddit client",
+    "description": "List the popular posts. List post + comments. Show user profiles",
     "author": "Momchil Georgiev"
   }
 ]
