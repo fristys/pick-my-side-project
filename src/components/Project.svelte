@@ -5,7 +5,13 @@
 </script>
 
 <style lang="scss">
-
+  section {
+    margin-top: 3rem;
+    color: #000;
+    background: #FFFF88;
+    padding: 2rem;
+    box-shadow: .05rem .1rem .25rem rgba(0,0,0,.25);
+  }
 </style>
 
 <section class="project">
