@@ -4,7 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import json from '@rollup/plugin-json';
-import css from 'rollup-plugin-css-only';
+import css from 'rollup-plugin-css-porter';
 import svelteSVG from 'rollup-plugin-svelte-svg';
 
 import autoPreprocess from 'svelte-preprocess';
@@ -47,7 +47,7 @@ export default {
       compact: true
     }),
 
-    css({ output: 'public/build/vendor.css' }),
+    css({ dest: 'public/build/vendor.css', minified: production }),
 
     svelteSVG({ dev: !production }),
 
