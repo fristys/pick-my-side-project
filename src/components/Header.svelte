@@ -11,6 +11,20 @@
 </script>
 
 <style lang="scss">
+  @keyframes shakeme {
+    0% { transform: translate(2px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(0px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(2px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(2px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
   header {
     text-align: center;
 
@@ -46,7 +60,12 @@
       outline: none;
 
       &:hover {
-        opacity: .75;
+        opacity: .85;
+        animation-name: shakeme;
+        animation-duration: 0.8s;
+        transform-origin: 50% 50%;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
       }
 
       // SR Only
@@ -65,6 +84,7 @@
       }
 
       .icon {
+        display: block;
         font-size: 3.5rem;
 
         @media (min-width:768px) {
