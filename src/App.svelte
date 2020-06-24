@@ -13,6 +13,7 @@
 
   // Components
   import Header from './components/Header.svelte';
+  import Footer from './components/Footer.svelte';
   import Project from './components/Project.svelte';
 
   // Values
@@ -25,10 +26,12 @@
 
     setTimeout(() => {
       document.body.style.setProperty('opacity', '1');
+
       document.documentElement.style.setProperty(
         '--backgroundStart',
         randomHex()
       );
+
       document.documentElement.style.setProperty(
         '--backgroundEnd',
         randomHex()
@@ -87,6 +90,21 @@
     transition: opacity 0.7s;
   }
 
+  // SR Only
+  :global(.sr-only) {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+  }
+
   main {
     height: 100vh;
     width: 100%;
@@ -110,28 +128,6 @@
       @media (min-width: 1025px) {
         max-width: 50%;
       }
-
-      footer {
-        margin-top: 4rem;
-        text-align: center;
-        color: rgba(0, 0, 0, 0.5);
-
-        span {
-          color: rgba(168, 63, 57, 0.75);
-        }
-
-        a,
-        a:visited {
-          color: rgba(0, 0, 0, 0.5);
-          text-decoration: none;
-          font-weight: 500;
-          transition: color .25s;
-
-          &:hover {
-            color: #000;
-          }
-        }
-      }
     }
   }
 </style>
@@ -146,12 +142,6 @@
       </div>
     {/if}
 
-    <footer role="contentinfo">
-      Made with
-      <span>&#9829;</span>
-      in Denmark
-      by
-      <a href="http://fristys.me">Momchil Georgiev</a>
-    </footer>
+    <Footer />
   </div>
 </main>
