@@ -1,8 +1,8 @@
 <script lang="typescript">
   // CSS normalisation
-	import '../node_modules/normalize.css/normalize.css';
-	
-	import { fade } from 'svelte/transition';
+  import '../node_modules/normalize.css/normalize.css';
+
+  import { fade } from 'svelte/transition';
 
   // TODO don't fetch this from a static file?
   // Project ideas list
@@ -25,27 +25,33 @@
 
     setTimeout(() => {
       document.body.style.setProperty('opacity', '1');
-      document.documentElement.style.setProperty('--backgroundStart', randomHex());
-      document.documentElement.style.setProperty('--backgroundEnd', randomHex());
+      document.documentElement.style.setProperty(
+        '--backgroundStart',
+        randomHex()
+      );
+      document.documentElement.style.setProperty(
+        '--backgroundEnd',
+        randomHex()
+      );
 
       project = projects[Math.floor(Math.random() * projects.length)];
-    }, 750);
+    }, 700);
   }
 
   function randomHex(): string {
-    return `#${((1 << 24) * Math.random()|0).toString(16)}`;
+    return `#${(((1 << 24) * Math.random()) | 0).toString(16)}`;
   }
 </script>
 
 <style type="scss">
   :global(:root) {
-      --textColor: #FFF;
-			--backgroundStart: #BB3049;
-      --backgroundEnd: #4A2C53;
-      
-      @media (min-width:768px) {
-        --textColor: #000;
-      }
+    --textColor: #fff;
+    --backgroundStart: #bb3049;
+    --backgroundEnd: #4a2c53;
+
+    @media (min-width: 768px) {
+      --textColor: #000;
+    }
   }
 
   :global(html),
@@ -69,12 +75,16 @@
     height: 100%;
     overflow: auto;
     font-size: 16px;
-    color: #FFF;
+    color: #fff;
     color: var(--textColor);
-    background: #BB3049;
+    background: #bb3049;
     background: var(--backgroundStart);
-    background: linear-gradient(to bottom left, var(--backgroundStart), var(--backgroundEnd));
-    transition: opacity .75s ease-in-out;
+    background: linear-gradient(
+      to bottom left,
+      var(--backgroundStart),
+      var(--backgroundEnd)
+    );
+    transition: opacity 0.7s;
   }
 
   main {
@@ -89,16 +99,38 @@
       padding: 4rem 1rem;
       max-width: 100%;
 
-      @media (min-width:768px) {
-        background-color: #FFF;
+      @media (min-width: 768px) {
+        background-color: #fff;
         max-width: 80%;
-        border-radius: .25rem;
-        padding: 5rem;
-        box-shadow: .05rem .1rem .25rem rgba(0,0,0,.25);
+        border-radius: 0.25rem;
+        padding: 5rem 5rem 2.5rem 5rem;
+        box-shadow: 0.05rem 0.1rem 0.25rem rgba(0, 0, 0, 0.25);
       }
 
-      @media (min-width:1025px) {
+      @media (min-width: 1025px) {
         max-width: 50%;
+      }
+
+      footer {
+        margin-top: 4rem;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.5);
+
+        span {
+          color: rgba(168, 63, 57, 0.75);
+        }
+
+        a,
+        a:visited {
+          color: rgba(0, 0, 0, 0.5);
+          text-decoration: none;
+          font-weight: 500;
+          transition: color .25s;
+
+          &:hover {
+            color: #000;
+          }
+        }
       }
     }
   }
@@ -113,5 +145,13 @@
         <Project {project} />
       </div>
     {/if}
+
+    <footer role="contentinfo">
+      Made with
+      <span>&#9829;</span>
+      in Denmark
+      by
+      <a href="http://fristys.me">Momchil Georgiev</a>
+    </footer>
   </div>
 </main>
